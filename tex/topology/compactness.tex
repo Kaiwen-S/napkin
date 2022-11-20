@@ -99,7 +99,7 @@ We need to do a bit more work for these examples, which we do in the next sectio
 %So you should assume all spaces in this section are metric spaces.
 
 \begin{theorem}
-	[Tychonoff's theorem] 
+	[Tychonoff's theorem]
 	\label{thm:tychonoff}
 	If $X$ and $Y$ are compact spaces, then so is $X \times Y$.
 \end{theorem}
@@ -317,14 +317,14 @@ Next, an important result about maps between compact spaces.
 Some nice corollaries of this:
 \begin{corollary}
 	[Extreme value theorem]
-	Let $X$ be compact and consider a continuous function $f : X \to \RR$.
+	Let $X$ be compact and consider a continuous function $f \colon X \to \RR$.
 	Then $f$ achieves a \emph{maximum value} at some point,
 	i.e.\ there is a point $p \in X$ such that $f(p) \ge f(q)$ for any
 	other $q \in X$.
 \end{corollary}
 \begin{corollary}
 	[Intermediate value theorem]
-	Consider a continuous function $f: [0,1] \to \RR$.
+	Consider a continuous function $f \colon [0,1] \to \RR$.
 	Then the image of $f$ is of the form $[a,b]$ for some real numbers $a \le b$.
 \end{corollary}
 
@@ -354,13 +354,13 @@ Some nice corollaries of this:
 \end{example}
 
 One last application: if $M$ is a compact metric space,
-then continuous functions $f : M \to N$
+then continuous functions $f \colon M \to N$
 are continuous in an especially ``nice'' way:
 \begin{definition}
-	A function $f : M \to N$ of metric spaces
+	A function $f \colon M \to N$ of metric spaces
 	is called \vocab{uniformly continuous}
 	if for any $\eps > 0$, there exists a $\delta > 0$
-	(depending only on $\eps$) such that 
+	(depending only on $\eps$) such that
 	whenever $d_M(x,y) < \delta$ we also have $d_N(fx, fy) < \eps$.
 \end{definition}
 The name means that for $\eps > 0$,
@@ -375,11 +375,11 @@ we need a $\delta$ that works for \emph{every point} of $M$.
 		with a bounded derivative is uniformly continuous.
 		(The converse is false for the reason that uniformly continuous
 		doesn't imply differentiable at all.)
-		\ii The function $f : \RR \to \RR$ by $x \mapsto x^2$
+		\ii The function $f \colon \RR \to \RR$ by $x \mapsto x^2$
 		is \emph{not} uniformly continuous, since for large $x$,
 		tiny $\delta$ changes to $x$ lead to fairly large changes in $x^2$.
 		(If you like, you can try to prove this formally now.)
-		
+
 		Think $f(2017.01) - f(2017) > 40$;
 		even when $\delta = 0.01$, one can still cause large changes in $f$.
 
@@ -513,7 +513,7 @@ Of these \Cref{thm:bzw} is definitely my favorite.
 \end{problem}
 
 %\begin{sproblem}[Compact Implies Bounded]
-%	Let $f : X \to \RR$ be a continuous function,
+%	Let $f \colon X \to \RR$ be a continuous function,
 %	where $X$ is a compact topological space.
 %	Show that $f$ is bounded.
 %	\begin{hint}
@@ -578,7 +578,7 @@ Of these \Cref{thm:bzw} is definitely my favorite.
 	\[
 		\forall \eps > 0 \quad
 		\exists \delta > 0 \quad
-		\forall n \; 
+		\forall n \;
 		\forall x,y \quad
 		\left( \left\lvert x-y \right\rvert <\delta
 		\implies \left\lvert f_n(x) - f_n(y) \right\rvert < \eps \right)

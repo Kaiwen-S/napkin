@@ -6,7 +6,7 @@ Here's one way to motivate this chapter. It turns out that:
 \end{itemize}
 This is unfortunate, because if possible we would like
 to be able to tell these spaces apart (as they are
-in fact not homotopy equivalent), but the homology groups 
+in fact not homotopy equivalent), but the homology groups
 cannot tell the difference between them.
 
 In this chapter, we'll define a \emph{cohomology group} $H^n(X)$ and $H^n(Y)$.
@@ -75,7 +75,7 @@ The case of interest is our usual geometric situation, with $C_\bullet(X)$.
 	its elements are called \vocab{cochains}.
 
 	Then we define the \vocab{cohomology groups}
-	of the space $X$ as 
+	of the space $X$ as
 	\[ H^n(X; G) \defeq H^n(C_\bullet(X); G) = H_n(C^\bullet(X;G)). \]
 \end{definition}
 \begin{remark}
@@ -94,13 +94,13 @@ The case of interest is our usual geometric situation, with $C_\bullet(X)$.
 		\ii $C_1(X)$ is the free abelian group on $1$-simplices in $X$.
 		So $C^1(X)$ needs to take every $1$-simplex to an element of $G$.
 	\end{itemize}
-	Let's now try to understand $\delta : C^0(X) \to C^1(X)$.
+	Let's now try to understand $\delta \colon C^0(X) \to C^1(X)$.
 	Given a $0$-cochain $\phi \in C^0(X)$,
-	i.e.\ a homomorphism $\phi : C^0(X) \to G$,
-	what is $\delta\phi : C^1(X) \to G$?
-	Answer: 
-	\[ \delta\phi : [v_0, v_1] \mapsto \phi([v_0]) - \phi([v_1]). \]
-	Hence, elements of 
+	i.e.\ a homomorphism $\phi \colon C^0(X) \to G$,
+	what is $\delta\phi \colon C^1(X) \to G$?
+	Answer:
+	\[ \delta\phi \colon [v_0, v_1] \mapsto \phi([v_0]) - \phi([v_1]). \]
+	Hence, elements of
 	$\ker(C^0 \taking\delta C^1) \cong H^0(X;G)$
 	are those cochains
 	that are \emph{constant on path-connected components}.
@@ -116,7 +116,7 @@ if $X$ has $r$ path-connected components (where $r$ is finite\footnote{%
 
 	These are actually different for infinite indexing sets.
 	For general modules $\bigoplus_\alpha M_\alpha$ is \emph{defined} to only allow
-	to have \emph{finitely many} zero terms.
+	to have \emph{finitely many} nonzero terms.
 	(This was never mentioned earlier in the Napkin,
 	since I only ever defined $M \oplus N$ and extended it to finite direct sums.)
 	No such restriction holds for $\prod_\alpha G_\alpha$ a product of groups.
@@ -149,18 +149,18 @@ First, let's categorize the previous results we had:
 
 \begin{exercise}
 	Interpret $\Hom(-,G)$ as a contravariant functor
-	from \[ \Hom(-,G) : \catname{Cmplx}\op \to \catname{CoCmplx}. \]
-	This means in particular that given a chain map $f : A_\bullet \to B_\bullet$,
-	we naturally obtain a dual map $f^\vee : B^\bullet \to A^\bullet$.
+	from \[ \Hom(-,G) \colon \catname{Cmplx}\op \to \catname{CoCmplx}. \]
+	This means in particular that given a chain map $f \colon A_\bullet \to B_\bullet$,
+	we naturally obtain a dual map $f^\vee \colon B^\bullet \to A^\bullet$.
 \end{exercise}
 
 \begin{ques}
-	Interpret $H^n : \catname{CoCmplx} \to \catname{Grp}$ as a functor.
+	Interpret $H^n \colon \catname{CoCmplx} \to \catname{Grp}$ as a functor.
 	Compose these to get a contravariant functor
-	$H^n(-;G) : \catname{Cmplx}\op \to \catname{Grp}$.
+	$H^n(-;G) \colon \catname{Cmplx}\op \to \catname{Grp}$.
 \end{ques}
 
-Then in exact analog to our result that $H_n : \catname{hTop} \to \catname{Grp}$ we have:
+Then in exact analog to our result that $H_n \colon \catname{hTop} \to \catname{Grp}$ we have:
 \begin{theorem}[$H^n (-;G): \catname{hTop}\op \to \catname{Grp}$]
 	For every $n$, $H^n(-;G)$ is a contravariant functor
 	from $\catname{hTop}\op$ to $\catname{Grp}$.
@@ -199,7 +199,7 @@ Then in exact analog to our result that $H_n : \catname{hTop} \to \catname{Grp}$
 	$f_\sharp - g_\sharp = P \partial + \partial P$.
 	If we apply the entire functor $\Hom(-;G)$ we get that
 	$f^\sharp - g^\sharp = \delta P^\vee + P^\vee \delta$
-	where $P^\vee : C^{n+1}(Y;G) \to C^n(X;G)$.
+	where $P^\vee \colon C^{n+1}(Y;G) \to C^n(X;G)$.
 	So $f^\sharp$ and $g^\sharp$ are chain homotopic thus $f^\ast = g^\ast$.
 \end{proof}
 
@@ -226,7 +226,7 @@ which is by definition free.
 
 There are two things we need to explain, what the map $h$ is and the map $\Ext$ is.
 
-It's not too hard to guess how \[ h : H^n(A_\bullet; G) \to \Hom(H_n(A_\bullet), G) \] is defined.
+It's not too hard to guess how \[ h \colon H^n(A_\bullet; G) \to \Hom(H_n(A_\bullet), G) \] is defined.
 An element of $H^n(A_\bullet;G)$ is represented by a function which sends a cycle
 in $A_n$ to an element of $G$.
 The content of the theorem is to show that $h$ is surjective with kernel $\Ext(H_{n-1}(A_\bullet), G)$.
@@ -250,7 +250,7 @@ but the upshot of the little bit that I did include is that the $\Ext$
 functor is very easy to compute in practice, since
 you can pick any free resolution you want and compute the above.
 
-%By ``natural'', we mean that if $f : A_\bullet \to B_\bullet$ is a chain map,
+%By ``natural'', we mean that if $f \colon A_\bullet \to B_\bullet$ is a chain map,
 %then we obtain a commutative diagram
 %\begin{diagram}
 %	0 & \rTo & \Ext(H_{n-1}(A_\bullet), G) & \rTo
@@ -276,7 +276,7 @@ you can pick any free resolution you want and compute the above.
 	then so is $F_1 \oplus F_1' \to F_0 \oplus F_0' \to H \oplus H' \to 0$.
 
 	For (b), note that $0 \to H \to H \to 0$ is a free resolution.
-	
+
 	Part (c) follows by taking the free resolution
 	\[ 0 \to \ZZ \taking{\times n} \ZZ \to \Zc n \to 0 \]
 	and applying $\Hom(-,G)$ to it.
@@ -300,7 +300,7 @@ any cohomology groups, provided we know the homology ones.
 	[Cohomolgy groups of $S^m$]
 	It is straightforward to compute $H^n(S^m)$ now:
 	all the $\Ext$ terms vanish since $H_n(S^m)$ is always free,
-	and hence we obtain that 
+	and hence we obtain that
 	\[ H^n(S^m) \cong \Hom(H_n(S^m), G) \cong
 		\begin{cases}
 			G & n=m, n=0 \\
@@ -373,7 +373,7 @@ From these examples one might notice that:
 			G & n = 0 \\
 			G \oplus \Hom(\Zc2, G) & n = 1 \\
 			G/2G & n = 2 \\
-			0 & n \ge 3. 
+			0 & n \ge 3.
 		\end{cases}
 	\]
 \end{example}
@@ -425,7 +425,7 @@ it is easiest to simply define:
 		\wt H^n(X \vee Y; G)
 		\cong
 		\wt H^n(X; G) \oplus \wt H^n(Y; G).
-	\]	
+	\]
 \end{sproblem}
 
 \begin{dproblem}

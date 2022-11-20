@@ -107,7 +107,7 @@ Here is also a trivial example.
 \end{definition}
 \begin{exercise}
 	[Comedic]
-	Show that a ring is nontrivial if and only if $0_R \ne 1_R$.
+	Show that a ring is nontrivial if and only if $0_R \neq 1_R$.
 \end{exercise}
 
 Since I've defined this structure, I may as well state the obligatory facts about it.
@@ -283,8 +283,8 @@ we did with quotient groups.\footnote{I once found an
 First, we define a homomorphism and isomorphism.
 \begin{definition}
 	Let $R = (R, +_R, \times_R)$ and $S = (S, +_S, \times_S)$ be rings.
-	A \vocab{ring homomorphism} is a map $\phi : R \to S$
-	such that 
+	A \vocab{ring homomorphism} is a map $\phi \colon R \to S$
+	such that
 	\begin{enumerate}[(i)]
 		\ii $\phi(x +_R y) = \phi(x) +_S \phi(y)$ for each $x,y \in R$.
 		\ii $\phi(x \times_R y) = \phi(x) \times_S \phi(y)$ for each $x,y \in R$.
@@ -314,7 +314,7 @@ consider the map $\ZZ \to \ZZ$ called ``multiply by zero''.
 	might have thought were homomorphisms will fail.
 	\begin{enumerate}[(a)]
 		\ii The map $\ZZ \to \ZZ$ by $x \mapsto 2x$
-		is not a ring homomomorphism.
+		is not a ring homomorphism.
 		Aside from the fact it sends $1$ to $2$,
 		it also does not preserve multiplication.
 
@@ -400,11 +400,11 @@ More explicitly,
 \begin{proof}
 	It's quite similar to the proof for the normal subgroup thing,
 	and you might try it yourself as an exercise.
-	
+
 	Obviously the conditions are necessary.
 	To see they're sufficient, we \emph{define} a ring by ``cosets''
 	\[ S = \left\{ r + I \mid r \in R \right\}. \]
-	These are the equivalence where we say $r_1 \sim r_2$ if $r_1 - r_2 \in I$
+	These are the equivalence classes under $r_1 \sim r_2$ if and only if $r_1 - r_2 \in I$
 	(think of this as taking ``mod $I$'').
 	To see that these form a ring, we have to check that the addition
 	and multiplication we put on them is well-defined.
@@ -472,7 +472,7 @@ To expand on that:
 \begin{proposition}
 	[Proper ideal $\iff$ no units]
 	Let $R$ be a ring and $I \subseteq R$ an ideal.
-	Then $I$ is proper (i.e.\ $I \ne R$)
+	Then $I$ is proper (i.e.\ $I \neq R$)
 	if and only if it contains no units of $R$.
 \end{proposition}
 \begin{proof}
@@ -632,7 +632,7 @@ and tell you what the additional condition is in the next chapter.
 		For example, $\QQ[x]$, $\RR[x]$, $\CC[x]$ are PID's.
 
 		If you want to try and prove this,
-		first prove an analog of Bezout's lemma,
+		first prove an analog of B\'{e}zout's lemma,
 		which implies the result.
 
 		\ii $\CC[x,y]$ is not a PID, because $(x,y)$
@@ -660,7 +660,7 @@ Unfortunately, in certain weird rings this is also not the case.
 Nonetheless, most ``sane'' rings we work in
 \emph{do} have the property that their ideals are finitely generated.
 We now name such rings and give two equivalent definitions:
-\begin{proposition}[The equvialent definitions of a Noetherian ring]
+\begin{proposition}[The equivalent definitions of a Noetherian ring]
 	For a ring $R$, the following are equivalent:
 	\begin{enumerate}[(a)]
 		\ii Every ideal $I$ of $R$ is finitely generated
@@ -772,7 +772,7 @@ Please bear with me!
 %	\begin{itemize}
 %		\ii $f(x+y) = f(x) + f(y)$ for $x,y \in R$,
 %		\ii $f(xy) = f(x) f(y)$ for $x,y \in R$,
-%		\ii $f(1_R) \ne 1_S$ (i.e.\ $f$ is not a ring homomorphism).
+%		\ii $f(1_R) \neq 1_S$ (i.e.\ $f$ is not a ring homomorphism).
 %	\end{itemize}
 %	\begin{hint}
 %		Take $S = R \times R$ with $R$ nonzero.
@@ -825,5 +825,3 @@ Please bear with me!
 		I think the result is true if you add the assumption $A$ is Noetherian.
 	\end{sol}
 \end{problem}
-
-

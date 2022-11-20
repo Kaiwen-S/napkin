@@ -15,11 +15,11 @@ what surprising results are true for general categories, I strongly recommend \c
 From earlier chapters let's recall the definition of an \emph{isomorphism} of two objects:
 \begin{itemize}
 	\ii Two groups $G$ and $H$ are isomorphic if there was a bijective homomorphism:
-	equivalently, we wanted homomorphisms $\phi : G \to H$ and $\psi : H \to G$
+	equivalently, we wanted homomorphisms $\phi \colon G \to H$ and $\psi \colon H \to G$
 	which were mutual inverses, meaning $\phi \circ \psi = \id_H$ and $\psi \circ \phi = \id_G$.
 	\ii Two metric (or topological) spaces $X$ and $Y$ are isomorphic
-	if there is a continuous bijection $f : X \to Y$ such that $f\inv$ is also continuous.
-	\ii Two vector spaces $V$ and $W$ are isomorphic if there is a bijection $T : V \to W$
+	if there is a continuous bijection $f \colon X \to Y$ such that $f\inv$ is also continuous.
+	\ii Two vector spaces $V$ and $W$ are isomorphic if there is a bijection $T \colon V \to W$
 	which is a linear map.
 	Again, this can be re-cast as saying that $T$ and $T\inv$ are linear maps.
 	\ii Two rings $R$ and $S$ are isomorphic if there is a bijective ring homomorphism $\phi$;
@@ -36,7 +36,7 @@ Let's use this to motivate the definition of a general \emph{category}.
 	A \vocab{category} $\AA$ consists of:
 	\begin{itemize}
 		\ii A class of \vocab{objects}, denoted $\obj(\AA)$.
-		\ii For any two objects $A_1, A_2 \in \obj(\AA)$, 
+		\ii For any two objects $A_1, A_2 \in \obj(\AA)$,
 		a class of \vocab{arrows} (also called \vocab{morphisms} or \vocab{maps}) between them.
 		We'll denote the set of these arrows by $\Hom_\AA(A_1, A_2)$.
 		\ii For any $A_1, A_2, A_3 \in \obj(\AA)$,
@@ -54,7 +54,7 @@ Let's use this to motivate the definition of a general \emph{category}.
 		The composition operation $\circ$ is part of the data of $\AA$;
 		it must be associative.
 		In the diagram above we say that $h$ \vocab{factors} through $A_2$.
-		
+
 		\ii Finally, every object $A \in \obj(\AA)$ has a special \vocab{identity arrow} $\id_A$;
 		you can guess what it does.\footnote{To be painfully explicit:
 			if $f \colon A' \to A$ is an arrow then $\id_A \circ f = f$;
@@ -97,7 +97,7 @@ Let's formalize the motivation we began with.
 		whose arrows are the continuous maps.
 		\ii There is a category $\catname{Top}_\ast$ of topological spaces with a \emph{distinguished basepoint};
 		that is, a pair $(X, x_0)$ where $x_0 \in X$.
-		Arrows are continuous maps $f : X \to Y$ with $f(x_0) = y_0$.
+		Arrows are continuous maps $f \colon X \to Y$ with $f(x_0) = y_0$.
 		\ii Similarly, there is a category $\catname{Vect}_k$ of
 		vector spaces (possibly infinite-dimensional) over a field $k$,
 		whose arrows are the linear maps.
@@ -123,7 +123,7 @@ And of course, we can now define what an isomorphism is!
 	(This is offensively easy.)
 \end{ques}
 More importantly, this definition should strike you as a little impressive.
-We're able to define whether two groups (rings, spaces, etc.) are isomorphic
+We're able to define whether two groups (rings, spaces, etc.)\ are isomorphic
 solely by the functions between the objects.
 Indeed, one of the key themes in category theory (and even algebra) is that
 \begin{moral}
@@ -200,7 +200,7 @@ Here's a second quite important example of a non-concrete category.
 	It's not: there's real content.
 	To see this, suppose your education had been shuffled and you took a course
 	on category theory before ever learning what a group was.
-	Someone comes to you and says: 
+	Someone comes to you and says:
 
 	``There are these structures called `groups', and the idea is this:
 	a group is what you get when you collect together all the symmetries
@@ -336,7 +336,7 @@ and avoid referring to anything about the sets themselves.
 How might I do this?
 
 Well, let's think about maps into $X \times Y$.
-The key observation is that 
+The key observation is that
 \begin{moral}
 A function $A \taking f X \times Y$
 amounts to a pair of functions $(A \taking g X, A \taking h Y)$.
@@ -405,10 +405,10 @@ Nonetheless:
 		& & X & & \\
 		\\
 		P_1 \ar[rrdd, "\pi_Y^1"', two heads] \ar[rruu, "\pi_X^1", two heads] \ar[rr, "f", two heads]
-			&& P_2 \ar[rr, "g", two heads] \ar[uu, "\pi_X^2"', two heads] \ar[dd, "\pi_Y^2" two heads]
-			&& P_1 \ar[lluu, "\pi_X^1"', two heads] \\
+			&& P_2 \ar[rr, "g", two heads] \ar[uu, "\pi_X^2"', two heads] \ar[dd, "\pi_Y^2", two heads]
+			&& P_1 \ar[lluu, "\pi_X^1"', two heads] \ar[lldd, "\pi_Y^1"', two heads] \\
 		\\
-		&& Y \ar[rruu, "\pi_Y^1"', two heads] &&
+		&& Y  &&
 	\end{tikzcd}
 	\end{center}
 	There are unique morphisms $f$ and $g$ between $P_1$ and $P_2$ that
@@ -602,7 +602,7 @@ Most notably:
 		(every two points have disjoint open neighborhoods),
 		in fact epic $\iff$ dense image (like $\QQ \injto \RR$).
 	\end{enumerate}
-	Thus failures arise when a function $f : X \to Y$ can be determined by just some of the points of $X$.
+	Thus failures arise when a function $f \colon X \to Y$ can be determined by just some of the points of $X$.
 \end{example}
 
 \section\problemhead
@@ -629,7 +629,7 @@ Most notably:
 \begin{problem}
 	\gim
 	Consider a category $\AA$ with a \vocab{zero object},
-	meaning an object which is both initial and terminal. 
+	meaning an object which is both initial and terminal.
 	Given objects $X$ and $Y$ in $A$,
 	prove that the projection $X \times Y \to X$ is epic.
 \end{problem}

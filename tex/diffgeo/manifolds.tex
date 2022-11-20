@@ -26,7 +26,7 @@ Actually there are two ways to think about a topological manifold $M$:
 	some open neighborhood of $p$ looks like an open set of $\RR^n$.
 	For example, to someone standing on the surface of the Earth,
 	the Earth looks much like $\RR^2$.
-	
+
 	\ii ``Globally'': there exists an open cover of $M$
 	by open sets $\{U_i\}_i$ (possibly infinite) such that each $U_i$
 	is homeomorphic to some open subset of $\RR^n$.
@@ -44,14 +44,14 @@ the second one is easier to use formally.
 	with an open cover $\{U_i\}$ of sets
 	homeomorphic to subsets of $\RR^n$,
 	say by homeomorphisms
-	\[ \phi_i : U_i \taking\cong E_i \subseteq \RR^n \]
+	\[ \phi_i \colon U_i \taking\cong E_i \subseteq \RR^n \]
 	where each $E_i$ is an open subset of $\RR^n$.
-	Each $\phi_i : U_i \to E_i$ is called a \vocab{chart},
+	Each $\phi_i \colon U_i \to E_i$ is called a \vocab{chart},
 	and together they form a so-called \vocab{atlas}.
 \end{definition}
 \begin{remark}
 	Here ``$E$'' stands for ``Euclidean''.
-	I think this notation is not standard; usually 
+	I think this notation is not standard; usually
 	people just write $\phi_i(U_i)$ instead.
 \end{remark}
 \begin{remark}
@@ -129,7 +129,7 @@ $\{U_i \taking{\phi_i} E_i\}$.
 	For any $i$, $j$ such that $U_i \cap U_j \neq \varnothing$,
 	the \vocab{transition map} $\phi_{ij}$ is the composed map
 	\[
-		\phi_{ij} : E_i \cap \phi_i\im(U_i \cap U_j)
+		\phi_{ij} \colon E_i \cap \phi_i\im(U_i \cap U_j)
 		\taking{\phi_i\inv}
 		U_i \cap U_j
 		\taking{\phi_j} E_j \cap \phi_j\im(U_i \cap U_j).
@@ -184,7 +184,7 @@ of each $E_1$ and $E_2$:
 We want to add enough structure so that we can use differential forms.
 
 \begin{definition}
-	We say $M$ is a \vocab{smooth manifold} 
+	We say $M$ is a \vocab{smooth manifold}
 	if all its transition maps are smooth.
 \end{definition}
 
@@ -193,7 +193,7 @@ for a map between two open sets of $\RR^n$ to be differentiable.
 
 With smooth manifolds we can try to port over definitions that
 we built for $\RR^n$ onto our manifolds.
-So in general, all definitions involving smooth manifolds will reduce to 
+So in general, all definitions involving smooth manifolds will reduce to
 something on each of the coordinate charts, with a compatibility condition.
 
 AS an example, here is the definition of a ``smooth map'':
@@ -249,7 +249,7 @@ One very common special case is to take $m = 1$ above.
 	and let $f \colon U \to \RR$ be smooth.
 	Let $M$ be the set of points $p \in U$
 	such that $f(p) = 0$.
-	If $M \ne \varnothing$ and
+	If $M \neq \varnothing$ and
 	$(Df)_p$ is not the zero map for any $p \in M$,
 	then $M$ is a manifold of dimension $n-1$.
 \end{corollary}
@@ -261,7 +261,7 @@ One very common special case is to take $m = 1$ above.
 	Note that
 	\[ Df = 2x \cdot dx + 2y \cdot dy \]
 	which in particular is nonzero
-	as long as $(x,y) \ne (0,0)$, i.e.\ as long as $c \ne 0$.
+	as long as $(x,y) \neq (0,0)$, i.e.\ as long as $c \neq 0$.
 	Thus:
 	\begin{itemize}
 		\ii When $c > 0$, the resulting curve ---
@@ -444,7 +444,7 @@ rather than as embedded in $\RR^n$.\footnote{This
 	that we think of a group as an abstract object in its own right,
 	even though Cayley's Theorem tells us that any group is a subgroup
 	of the permutation group.
-	
+
 	Note this wasn't always the case!
 	During the 19th century, a group was literally defined
 	as a subset of $\text{GL}(n)$ or of $S_n$.
@@ -506,7 +506,7 @@ for $D$ is equivalent to the following three conditions:
 	\ii $D(fg) = 0$ whenever $f(p) = g(p) = 0$.
 	Intuitively, this means that if a function $h = fg$
 	vanishes to second order at $p$,
-	then its derivative along $D$ should be zero. 
+	then its derivative along $D$ should be zero.
 \end{enumerate}
 
 This suggests a third equivalent definition:
@@ -545,8 +545,8 @@ Using some real analysis, one can prove the following result:
 	Then
 	\[
 	\begin{aligned}
-		\km_0 &= \{ \text{smooth functions } f : f(0) = 0 \} \\
-		\km_0^2 &= \{ \text{smooth functions } f : f(0) = 0, (\nabla f)_0 = 0 \}.
+		\km_0 &= \{ \text{smooth functions } f \colon f(0) = 0 \} \\
+		\km_0^2 &= \{ \text{smooth functions } f \colon f(0) = 0, (\nabla f)_0 = 0 \}.
 	\end{aligned}
 	\]
 	In other words $\km_0^2$ is the set of functions which vanish at $0$

@@ -4,8 +4,8 @@ the homology groups of any CW complex we like.
 
 \section{Degrees}
 \prototype{$z \mapsto z^d$ has degree $d$.}
-For any $n > 0$ and map $f : S^n \to S^n$, consider
-\[ f_\ast : \underbrace{H_n(S^n)}_{\cong \ZZ} \to \underbrace{H_n(S^n)}_{\cong \ZZ} \]
+For any $n > 0$ and map $f \colon S^n \to S^n$, consider
+\[ f_\ast \colon \underbrace{H_n(S^n)}_{\cong \ZZ} \to \underbrace{H_n(S^n)}_{\cong \ZZ} \]
 which must be multiplication by some constant $d$.
 This $d$ is called the \vocab{degree} of $f$, denoted $\deg f$.
 \begin{ques}
@@ -39,7 +39,7 @@ One nice application of this:
 \begin{proof}
 	If the vectors are nonzero then WLOG they have norm $1$;
 	that is for every $x$ we have an orthogonal unit vector $v(x)$.
-	Then we can construct a homotopy map $F : S^n \times [0,1] \to S^n$ by
+	Then we can construct a homotopy map $F \colon S^n \times [0,1] \to S^n$ by
 	\[ (x,t) \mapsto (\cos \pi t)x + (\sin \pi t) v(x). \]
 	which gives a homotopy from $\id$ to $-\id$.
 	So $\deg(\id) = \deg(-\id)$, which means $1 = (-1)^{n+1}$
@@ -196,7 +196,7 @@ want $\chi(X)$ to only depend on the space $X$ itself
 	\[ \chi(X) = \sum_n (-1)^n \rank H_n(X). \]
 \end{theorem}
 Thus $\chi(X)$ does not depend on the choice of CW decomposition.
-The numbers 
+The numbers
 \[ b_n = \rank H_n(X) \]
 are called the \vocab{Betti numbers} of $X$.
 In fact, we can use this to define $\chi(X)$ for any reasonable space;
@@ -238,7 +238,7 @@ we are happy because in the (frequent) case that $X$ is a CW complex,
 		\ii The Betti numbers of $\CP^n$ are $b_0 = b_2 = \dots = b_{2n} = 1$,
 		and zero elsewhere. Thus the Euler characteristic is $n+1$.
 		\ii The Betti numbers of the Klein bottle
-		are $b_0 = 1$, $b_1 = 1$ and zero elsewhere. 
+		are $b_0 = 1$, $b_1 = 1$ and zero elsewhere.
 		Thus the Euler characteristic is $0$, the same as the sphere
 		(also since their CW structures use the same number of cells).
 	\end{enumerate}
@@ -252,14 +252,14 @@ In fact, one can describe explicitly what the maps $d_n$ are.
 Recalling that $H_k(X^k, X^{k-1})$ has a basis the $k$-cells of $X$, we obtain:
 \begin{theorem}
 	[Cellular boundary formula for $k=1$]
-	For $k=1$, \[ d_1 : \Cells_1(X) \to \Cells_0(X) \] is just the boundary map.
+	For $k=1$, \[ d_1 \colon \Cells_1(X) \to \Cells_0(X) \] is just the boundary map.
 \end{theorem}
 \begin{theorem}
 	[Cellular boundary for $k > 1$]
 	Let $k > 1$ be a positive integer.
 	Let $e^k$ be an $k$-cell, and let $\{e_\beta^{k-1}\}_\beta$
 	denote all $(k-1)$-cells of $X$.
-	Then \[ d_k : \Cells_k(X) \to \Cells_{k-1}(X) \]
+	Then \[ d_k \colon \Cells_k(X) \to \Cells_{k-1}(X) \]
 	is given on basis elements by
 	\[ d_k(e^k) = \sum_\beta d_\beta e_\beta^{k-1} \]
 	where $d_\beta$ is be the degree of the composed map
@@ -273,14 +273,14 @@ This gives us an algorithm for computing homology groups of a CW complex:
 \begin{itemize}
 	\ii Construct the cellular chain complex,
 	where $\Cells_k(X)$ is $\ZZ^{\oplus \# \text{$k$-cells}}$.
-	\ii $d_1 : \Cells_1(X) \to \Cells_0(X)$ is just the boundary map
+	\ii $d_1 \colon \Cells_1(X) \to \Cells_0(X)$ is just the boundary map
 	(so $d_1(e^1)$ is the difference of the two endpoints).
-	\ii For any $k > 1$, we compute $d_k : \Cells_k(X) \to \Cells_{k-1}(X)$
+	\ii For any $k > 1$, we compute $d_k \colon \Cells_k(X) \to \Cells_{k-1}(X)$
 	on basis elements as follows.
 	Repeat the following for each $k$-cell $e^k$:
 	\begin{itemize}
 		\ii For every $k-1$ cell $e^{k-1}_\beta$,
-		compute the degree of the boundary of $e^k$ welded onto 
+		compute the degree of the boundary of $e^k$ welded onto
 		the boundary of $e^{k-1}_\beta$, say $d_\beta$.
 		\ii Then $d_k(e^k) = \sum_\beta d_\beta e^{k-1}_\beta$.
 	\end{itemize}
@@ -381,7 +381,7 @@ as well as the Klein bottle and other spaces.
 \end{dproblem}
 
 \begin{problem}
-	Show that a non-surjective map $f : S^n \to S^n$ has degree zero.
+	Show that a non-surjective map $f \colon S^n \to S^n$ has degree zero.
 	\begin{hint}
 		The space $S^n - \{x_0\}$ is contractible.
 	\end{hint}

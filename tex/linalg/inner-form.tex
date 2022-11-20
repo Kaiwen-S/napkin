@@ -48,7 +48,7 @@ to use $\left< v,w \right>$ for general vector spaces.
 		names include ``inner product'', ``dot product'',
 		``positive definite nondegenerate symmetric bilinear form'', \dots}
 	is a function
-	\[ \left< \bullet, \bullet \right> : V \times V \to \RR \]
+	\[ \left< \bullet, \bullet \right> \colon V \times V \to \RR \]
 	which satisfies the following properties:
 	\begin{itemize}
 		\ii The form is \vocab{symmetric}: for any $v,w \in V$ we have
@@ -84,7 +84,7 @@ to use $\left< v,w \right>$ for general vector spaces.
 	Let $e_1 = (1, 0, \dots, 0)$, $e_2 = (0, 1, \dots, 0)$,
 	\dots, $e_n = (0, \dots, 0, 1)$ be the usual basis.
 	Then we let
-	\[ 
+	\[
 		\left< a_1 e_1 + \dots + a_n e_n, b_1 e_1 + \dots + b_n e_n \right>
 		\defeq a_1 b_1 + \dots + a_n b_n.
 	\]
@@ -106,7 +106,7 @@ To be explicit:
 \begin{definition}
 	Let $V$ be a complex vector space.
 	A \vocab{complex inner product} is a function
-	\[ \left< \bullet, \bullet \right> : V \times V \to \CC \]
+	\[ \left< \bullet, \bullet \right> \colon V \times V \to \CC \]
 	which satisfies the following properties:
 	\begin{itemize}
 		\ii The form has \vocab{conjugate symmetry}, which means that
@@ -155,7 +155,7 @@ To be explicit:
 	The dot product in $\CC^n$ is defined as follows:
 	let $\ee_1$, $\ee_2$, \dots, $\ee_n$ be the standard basis.
 	For complex numbers $w_i$, $z_i$ we set
-	\[ 
+	\[
 		\left< w_1 \ee_1 + \dots + w_n \ee_n, z_1 \ee_1 + \dots + z_n \ee_n \right>
 		\defeq w_1\ol{z_1} + \dots + w_n \ol{z_n}.
 	\]
@@ -194,7 +194,7 @@ It'll be useful to treat both types of spaces simultaneously:
 	Let $e$ be any vector with $\left< e, e \right> = 1$ (a unit vector).
 	Then we would instead get
 	$\left< ie, ie \right> = - \left< e,e \right> = -1$;
-	this is a vector with length $-1$, which is not okay!
+	this is a vector with length $\sqrt{-1}$, which is not okay!
 	That's why it is important that,
 	when we have a complex inner product space,
 	our form is sesquilinear, not bilinear.
@@ -270,7 +270,8 @@ Thus:
 	[Triangle inequality]
 	We always have
 	\[ \norm v + \norm w \ge \norm{v+w} \]
-	with equality if and only if $v$ and $w$ are linearly dependent.
+	with equality if and only if $v$ and $w$ are linearly dependent
+	and point in the same direction.
 \end{theorem}
 \begin{exercise}
 	Prove this by squaring both sides, and applying Cauchy-Schwarz.
@@ -291,7 +292,7 @@ As we expect from our geometric intuition in $\RR^n$,
 this implies independence:
 \begin{lemma}[Orthogonal vectors are independent]
 	Any set of pairwise orthogonal vectors $v_1$, $v_2$, \dots, $v_n$,
-	with $\norm{v_i} \ne 0$ for each $i$,
+	with $\norm{v_i} \neq 0$ for each $i$,
 	is linearly independent.
 \end{lemma}
 \begin{proof}
@@ -406,7 +407,7 @@ Thus, when we have a Hilbert space, we change our definition slightly:
 	of vectors such that
 	\begin{itemize}
 		\ii $\left< e_i, e_i \right> = 1$ for all $i$,
-		\ii $\left< e_i, e_j \right> = 0$ for $i \ne j$,
+		\ii $\left< e_i, e_j \right> = 0$ for $i \neq j$,
 		i.e.\ the vectors are pairwise orthogonal
 		\ii every element of $V$ can be expressed uniquely as an
 		infinite linear combination
@@ -469,7 +470,9 @@ is exactly the one which ensures the infinite sum makes sense.
 	\end{hint}
 	\begin{sol}
 		Interpret clubs as vectors in the vector space $\mathbb F_2^n$.
-		Consider a ``dot product'' to show that all $k$ vectors are linearly independent.
+		Consider a ``dot product''
+		to show that all $k$ vectors are linearly independent:
+		any two different club-vectors have dot product $0$, so are orthogonal.
 		Thus $k \le \dim \mathbb F_2^n = n$.
 	\end{sol}
 \end{problem}
@@ -503,7 +506,7 @@ is exactly the one which ensures the infinite sum makes sense.
 	$n\times n$ matrices $M_1,\dots,M_k$ and $N_1,\dots,N_k$
 	with real entries such that for all $i$ and $j$,
 	the matrix product $M_i N_j$ has a zero entry somewhere
-	on its diagonal if and only if $i \ne j?$
+	on its diagonal if and only if $i \neq j?$
 	\begin{hint}
 		$k = n^n$.
 		Endow tensor products with an inner form.

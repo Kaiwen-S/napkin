@@ -89,7 +89,7 @@ Now the key definition is:
 	Let $G$ be an LCA group.
 	Then its \vocab{Pontryagin dual} is the abelian group
 	\[ \wh G \defeq \left\{ \text{continuous group homomorphisms }
-			\xi : G \to \TT \right\}. \]
+			\xi \colon G \to \TT \right\}. \]
 	The maps $\xi$ are called \vocab{characters}.
 	It can be itself made into an LCA group.\footnote{If you must
 		know the topology, it is the \vocab{compact-open topology}:
@@ -219,7 +219,7 @@ in the second half $G$ is not.
 \[
 	\begin{array}{llll}
 		\hline
-		\text{Name} & \text{Domain }G & \text{Dual }\wh G 
+		\text{Name} & \text{Domain }G & \text{Dual }\wh G
 			& \text{Characters} \\ \hline
 		\text{Binary Fourier analysis} & \{\pm1\}^n
 			& S \subseteq \left\{ 1, \dots, n \right\}
@@ -289,7 +289,7 @@ First, we need the following result:
 	it splits into the direct sum of irreducible representations of $G$.
 \end{lemma}
 \begin{proof}
-	Suppose $B : V \times V \to \CC$ is any inner product.
+	Suppose $B \colon V \times V \to \CC$ is any inner product.
 	Equip $G$ with a right-invariant Haar measure $dg$.
 	Then we can equip it with an ``averaged'' inner form
 	\[ \wt B(v,w) = \int_G B(gv, gw) \; dg. \]
@@ -303,7 +303,7 @@ The Peter-Weyl theorem then asserts that the finite-dimensional irreducible
 unitary representations essentially give an orthonormal basis for $L^2(G)$,
 in the following sense.  Let $V = (V, \rho)$ be such a representation of $G$,
 and fix an orthonormal basis of $e_1$, \dots, $e_d$ for $V$ (where $d = \dim V$).
-The $(i,j)$th \vocab{matrix coefficient} for $V$ is then given by 
+The $(i,j)$th \vocab{matrix coefficient} for $V$ is then given by
 \[ G \taking{\rho} \GL(V) \taking{\pi_{ij}} \CC \]
 where $\pi_{ij}$ is the projection onto the $(i,j)$th entry of the matrix.
 We abbreviate $\pi_{ij} \circ \rho$ to $\rho_{ij}$.
@@ -319,7 +319,7 @@ Then the theorem is:
 			\text{ and } 1 \le i,j \le \dim V \right\}  \]
 	is an orthonormal basis of $L^2(G)$.
 \end{theorem}
-Strictly, I should say $\Sigma$ is a set of representatives of 
+Strictly, I should say $\Sigma$ is a set of representatives of
 the isomorphism classes of irreducible unitary representations,
 one for each isomorphism class.
 

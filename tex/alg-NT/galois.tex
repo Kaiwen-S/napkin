@@ -96,7 +96,7 @@ in order to generalize the notion of a number field.
 	Let $K$ and $F$ be fields.
 	If $F \subseteq K$, we write $K/F$ and say $K$ is a
 	\vocab{field extension} of $F$.
-	
+
 	Thus $K$ is automatically an $F$-vector space
 	(just like $\QQ(\sqrt 2)$ is automatically a $\QQ$-vector space).
 	The \vocab{degree} is the dimension of this space, denoted $[K:F]$.
@@ -202,7 +202,7 @@ The relation between these embeddings and the Galois conjugates is given as foll
 	\label{thm:conj_distrb}
 	Let $K$ be a number field of degree $n$
 	with $n$ embeddings $\sigma_1$, \dots, $\sigma_n$,
-	and let $\alpha \in K$ have $m$ Galois conjugates over $\QQ$. 
+	and let $\alpha \in K$ have $m$ Galois conjugates over $\QQ$.
 
 	Then $\sigma_j(\alpha)$ is ``evenly distributed''
 	over each of these $m$ conjugates: for any Galois conjugate $\beta$,
@@ -317,11 +317,11 @@ this section that $\QQ(\cbrt 2)$ is deficient in a way that $\QQ(\sqrt 2)$ is no
 First, we define the ``internal'' automorphisms.
 \begin{definition}
 	Suppose $K/F$ is a finite extension.
-	Then $\Aut(K/F)$ is the set of \emph{field isomorphisms} $\sigma : K \to K$ which fix $F$.
+	Then $\Aut(K/F)$ is the set of \emph{field isomorphisms} $\sigma \colon K \to K$ which fix $F$.
 	In symbols
 	\[ \Aut(K/F) =
 		\left\{
-		\sigma : K \to K \mid
+		\sigma \colon K \to K \mid
 		\text{$\sigma$ is identity on $F$}
 	  \right\}.
 	\]
@@ -392,7 +392,7 @@ is the notion of a splitting field.
 \begin{definition}
 	Let $F$ be a field and $p(x) \in F[x]$ a polynomial of degree $n$.
 	Then $p(x)$ has roots $\alpha_1, \dots, \alpha_n$ in an algebraic closure of $F$.
-	The \vocab{splitting field} of $F$ is defined as $F(\alpha_1, \dots, \alpha_n)$.
+	The \vocab{splitting field} of $p(x)$ over $F$ is defined as $F(\alpha_1, \dots, \alpha_n)$.
 \end{definition}
 In other words, the splitting field is the smallest field in which $p(x)$ splits.
 \begin{example}[Examples of splitting fields]
@@ -435,7 +435,7 @@ then any permutation of the roots will work.
 
 Now, we obtain:
 \begin{theorem}[Galois extensions are splitting]
-	For finite extensions $K/F$, 
+	For finite extensions $K/F$,
 	$\left\lvert \Aut(K/F) \right\rvert$ divides $[K:F]$,
 	with equality if and only if $K$ is the \emph{splitting field}
 	of some separable polynomial with coefficients in $F$.
@@ -498,7 +498,7 @@ To explore $\QQ(\cbrt 2)$ one last time:
 	is the symmetric group on $3$ elements, with order $3! = 6$.
 \end{example}
 This example illustrates the fact that
-given a non-Galois field extension, 
+given a non-Galois field extension,
 one can ``add in'' missing conjugates to make it Galois.
 This is called taking a \vocab{Galois closure}.
 
@@ -570,7 +570,7 @@ That, and much more, holds in general.
 \end{theorem}
 
 \begin{exercise}
-	Suppose we apply this theorem for 
+	Suppose we apply this theorem for
 	\[ K = \QQ(\cbrt2, \omega). \]
 	Verify that the fact $E = \QQ(\cbrt 2)$ is not Galois
 	corresponds to the fact that $S_3$ does not have normal subgroups of order $2$.
@@ -638,7 +638,7 @@ That, and much more, holds in general.
 		the choice $\gamma = \alpha + \lambda \beta$ will work.
 	\end{hint}
 	\begin{sol}
-		\url{http://www.math.cornell.edu/~kbrown/6310/primitive.pdf}
+		\url{https://www.math.cornell.edu/~kbrown/6310/primitive.pdf}
 	\end{sol}
 \end{problem}
 

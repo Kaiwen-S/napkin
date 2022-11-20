@@ -235,7 +235,7 @@ So it suffices to understand the map $T$ well.
 
 \section{Smith normal form}
 The idea is now that we have reduced our problem to studying
-linear maps $T : R^{\oplus m} \to R^{\oplus n}$,
+linear maps $T \colon R^{\oplus m} \to R^{\oplus n}$,
 which can be thought of as a generic matrix
 \[ T = \begin{bmatrix}
 		a_{11} & \dots & a_{1m} \\
@@ -248,7 +248,7 @@ and $f_1$, \dots, $f_n$ of $N$.
 Of course, as you might expect it ought to be possible to change the
 given basis of $T$ such that $T$ has a nicer matrix form.
 We already saw this in \emph{Jordan form},
-where we had a map $T : V \to V$ and changed the basis
+where we had a map $T \colon V \to V$ and changed the basis
 so that $T$ was ``almost diagonal''.
 This time, we have \emph{two} sets of bases we can change,
 so we would hope to get a diagonal basis, or even better.
@@ -260,11 +260,11 @@ what operations are permitted?  Here are some examples:
 	to re-ordering the basis.
 	\ii Adding a multiple of a column to another column.
 	For example, if we add $3$ times the first column to the second column,
-	this is equivalent to replacing the basis 
+	this is equivalent to replacing the basis
 	\[ (e_1, e_2, e_3, \dots, e_m) \mapsto (e_1, e_2+3e_1, e_3, \dots, e_m). \]
 	\ii Adding a multiple of a row to another row.
 	One can see that adding $3$ times the first row to the second row
-	is equivalent to replacing the basis 
+	is equivalent to replacing the basis
 	\[ (f_1, f_2, f_3, \dots, f_n) \mapsto (f_1-3f_2, f_2, f_3, \dots, f_n). \]
 \end{itemize}
 More generally,
@@ -272,12 +272,12 @@ More generally,
 	If $A$ is an invertible $n \times n$ matrix we can
 	replace $T$ with $AT$.
 \end{moral}
-This corresponds to replacing 
+This corresponds to replacing
 \[ (f_1, \dots, f_n) \mapsto (A(f_1), \dots, A(f_n)) \]
 (the ``invertible'' condition just guarantees the latter is a basis).
 Of course similarly we can replace $X$ with $XB$
 where $B$ is an invertible $m \times m$ matrix;
-this corresponds to 
+this corresponds to
 \[ (e_1, \dots, e_m) \mapsto (B\inv(e_1), \dots, B\inv(e_m)) \]
 Armed with this knowledge, we can now approach:
 \begin{theorem}
@@ -293,7 +293,7 @@ Armed with this knowledge, we can now approach:
 \end{theorem}
 So if $m > n$, the matrix should take the form
 \[
-	\begin{bmatrix} 
+	\begin{bmatrix}
 		s_1 & 0 & 0 & 0 & \dots & 0 \\
 		0 & s_2 & 0 & 0 & \dots & 0 \\
 		\vdots & \vdots & \ddots & \vdots & \dots & \vdots \\
@@ -308,10 +308,10 @@ and similarly when $m \le n$.
 \begin{remark}
 	Note that this is not a generalization of Jordan form.
 	\begin{itemize}
-		\ii In Jordan form we consider maps $T : V \to V$;
+		\ii In Jordan form we consider maps $T \colon V \to V$;
 		note that the source and target space are the \emph{same},
 		and we are considering one basis for the space $V$.
-		\ii In Smith form the maps $T : M \to N$ are between
+		\ii In Smith form the maps $T \colon M \to N$ are between
 		\emph{different} modules, and we pick \emph{two} sets of bases
 		(one for $M$ and one for $N$).
 	\end{itemize}
@@ -329,20 +329,20 @@ and similarly when $m \le n$.
 	we perform the \textbf{Euclidean algorithm on the left column}:
 	subtract the second row from the first row,
 	then three times the first row from the second:
-	\[ 
+	\[
 		\begin{bmatrix}
 			18 & 38 & 48 \\
 			14 & 30 & 32
 		\end{bmatrix}
 		\mapsto
 		\begin{bmatrix}
-			4 & 8 & 10 \\
+			4 & 8 & 16 \\
 			14 & 30 & 32
 		\end{bmatrix}
 		\mapsto
 		\begin{bmatrix}
-			4 & 8 & 10 \\
-			2 & 6 & 2
+			4 & 8 & 16 \\
+			2 & 6 & -16
 		\end{bmatrix}.
 	\]
 	Now that the GCD of $2$ is present, we move it to the upper-left
@@ -351,46 +351,36 @@ and similarly when $m \le n$.
 	since $2$ was the GCD all along, we isolate $2$ completely:
 	\[
 		\begin{bmatrix}
-			4 & 8 & 10 \\
-			2 & 6 & 2
+			4 & 8 & 16 \\
+			2 & 6 & -16
 		\end{bmatrix}
 		\mapsto
 		\begin{bmatrix}
-			2 & 6 & 2 \\
-			4 & 8 & 10
+			2 & 6 & -16 \\
+			4 & 8 & 16
 		\end{bmatrix}
-		\mapsto 
-		\begin{bmatrix} 
-			2 & 6 & 2 \\
-			0 & -4 & 6 \\
+		\mapsto
+		\begin{bmatrix}
+			2 & 6 & -16 \\
+			0 & -4 & 48 \\
 		\end{bmatrix}
 		\mapsto
 		\begin{bmatrix}
 			2 & 0 & 0 \\
-			0 & -4 & 6
+			0 & -4 & 48
 		\end{bmatrix}.
 	\]
 	This reduces the problem to a $1 \times 2$ matrix.
 	So we just apply the Euclidean algorithm again there:
 	\[
-		\begin{bmatrix} 
+		\begin{bmatrix}
 			2 & 0 & 0 \\
-			0 & -4 & 6
-		\end{bmatrix}
-		\mapsto
-		\begin{bmatrix} 
-			2 & 0 & 0 \\
-			0 & -4 & 2
-		\end{bmatrix}
-		\mapsto
-		\begin{bmatrix} 
-			2 & 0 & 0 \\
-			0 & 0 & 2
+			0 & -4 & 0
 		\end{bmatrix}
 		\mapsto
 		\begin{bmatrix}
 			2 & 0 & 0 \\
-			0 & 2 & 0
+			0 & 4 & 0
 		\end{bmatrix}.
 	\]
 \end{example}
@@ -463,11 +453,11 @@ Now, we can apply our structure theorem!
 
 \begin{dproblem}
 	[Frobenius normal form]
-	Let $T : V \to V$ where $V$ is a finite-dimensional vector space
+	Let $T \colon V \to V$ where $V$ is a finite-dimensional vector space
 	over an arbitrary field $k$ (not necessarily algebraically closed).
 	Show that one can write $T$ as a block-diagonal matrix whose blocks
 	are all of the form
-	\[ 
+	\[
 		\begin{bmatrix}
 			0 & 0 & 0 & \dots & 0 & \ast  \\
 			1 & 0 & 0 & \dots & 0 & \ast  \\
@@ -485,7 +475,7 @@ Now, we can apply our structure theorem!
 
 \begin{dproblem}
 	[Jordan normal form]
-	Let $T : V \to V$ where $V$ is a finite-dimensional vector space
+	Let $T \colon V \to V$ where $V$ is a finite-dimensional vector space
 	over an arbitrary field $k$ which is algebraically closed.
 	Prove that $T$ can be written in Jordan form.
 	\begin{hint}
@@ -504,12 +494,12 @@ Now, we can apply our structure theorem!
 		it more or less implies that finitely generated abelian groups won't work.
 		So, look for an infinitely generated example.
 	\end{hint}
-	\begin{soln}
+	\begin{sol}
 		Take $G = \Zc3 \oplus \Zc9 \oplus \Zc9 \oplus \Zc9 \oplus \dots$
 		and $H = \Zc9 \oplus \Zc9 \oplus \Zc9 \oplus \Zc9 \oplus \dots$.
 		Then there are maps $G \injto H$ and $H \injto G$,
 		but the groups are not isomorphic since e.g.\
 		$G$ has an element $g \in G$ of order $3$
 		for which there's no $g' \in G$ with $g = 3g'$.
-	\end{soln}
+	\end{sol}
 \end{problem}

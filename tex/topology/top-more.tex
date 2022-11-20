@@ -145,7 +145,7 @@ a bijection which is continuous in both directions.
 Therefore, any property defined only in
 terms of open sets is preserved by homeomorphism.
 Such a property is called a \vocab{topological property}.
-However, the later adjectives we define 
+However, the later adjectives we define
 (``connected'', ``Hausdorff'', ``compact'') will all be defined
 only in terms of the open sets, so they will be.
 
@@ -337,7 +337,7 @@ it might help to solve \Cref{prob:disconnected_better_def}.
 \begin{example}[Disconnected and connected spaces]
 	\listhack
 	\begin{enumerate}[(a)]
-		\ii The metric space 
+		\ii The metric space
 		\[ \{ (x,y) \mid x^2+y^2\le 1 \}
 			\cup \{ (x,y) \mid (x-4)^2+y^2\le1\} \subseteq \RR^2 \]
 		is disconnected (it consists of two disks).
@@ -380,7 +380,7 @@ The short description: ``walk around in the space''.
 
 \begin{definition}
 	A \vocab{path} in the space $X$ is a continuous function
-	\[ \gamma : [0,1] \to X. \]
+	\[ \gamma \colon [0,1] \to X. \]
 	Its \vocab{endpoints} are the two points $\gamma(0)$ and $\gamma(1)$.
 \end{definition}
 
@@ -490,7 +490,7 @@ And the idea is just continuous deformation.
 \begin{definition}
 	Let $\alpha$ and $\beta$ be paths in $X$ whose endpoints coincide.
 	A (path) \vocab{homotopy} from $\alpha$ to $\beta$ is a continuous function
-	$F : [0,1]^2 \to X$, which we'll write $F_s(t)$ for $s,t \in [0,1]$,
+	$F \colon [0,1]^2 \to X$, which we'll write $F_s(t)$ for $s,t \in [0,1]$,
 	such that
 	\[ F_0(t) = \alpha(t) \text{ and } F_1(t) = \beta(t)
 		\text{ for all $t \in [0,1]$} \]
@@ -628,7 +628,7 @@ ever have to worry too much about are the $r$-neighborhoods.
 	\begin{hint}
 		Let $p$ be any point.
 		If there is a real number $r$
-		such that $d(p,q) \ne r$ for any $q \in M$,
+		such that $d(p,q) \neq r$ for any $q \in M$,
 		then the $r$-neighborhood of $p$ is clopen.
 	\end{hint}
 \end{problem}
@@ -655,7 +655,7 @@ ever have to worry too much about are the $r$-neighborhoods.
 \begin{problem}
 	\gim
 	Prove that the evenly spaced integer topology on $\ZZ$ is metrizable.
-	In other words, show that one can impose a metric $d : \ZZ^2 \to \RR$
+	In other words, show that one can impose a metric $d \colon \ZZ^2 \to \RR$
 	which makes $\ZZ$ into a metric space whose open sets are those described above.
 	% https://teratologicmuseum.wordpress.com/2009/05/05/a-metric-for-the-evenly-spaced-integer-topology/
 	\begin{hint}

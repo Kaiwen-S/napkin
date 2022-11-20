@@ -39,7 +39,7 @@ for every open set $U$.
 		pair q = (0,0.5);
 		filldraw(CR(q, 1.2), opacity(0.2)+lightred, red+dashed);
 		label("$U$", q+1.2*dir(45), dir(45), red);
-		
+
 		draw( (-9,0.5)--(-3,0.5), EndArrow);
 		label("$\pi$", (-6,0.5), dir(90));
 		label("$\boxed{f \in \mathcal O_Y(U)}$", (0,-5), red);
@@ -151,7 +151,7 @@ We already obviously have uniqueness in the following senes.
 \end{proposition}
 \begin{proof}
 	Given a section $s \in \OO_Y(U)$,
-	let 
+	let
 	\[ t = \pi^\sharp_U(s) \in \OO_X(\pi\pre(U)) \]
 	denote the image under $\pi^\sharp$.
 
@@ -293,7 +293,7 @@ which will force the ring homomorphisms to fix $\CC$, later.
 	which satisfies restriction maps.
 	Note that for any $U$, the element $y$ must map to a unit in $\RR[x]$;
 	since $1/y$ is a section too for a subset of $U$ not containing $(y)$.
-	Actually for any real number $c \ne 3$,
+	Actually for any real number $c \neq 3$,
 	$y-c$ must be map to a unit in $\RR[x]$.
 	This can only happen if $y \mapsto 3 \in \RR[x]$.
 
@@ -312,7 +312,7 @@ which is the data of an entire global section.
 So we're actually trying to specify
 \[ \RR[y]_{(y-3)} = \OO_{\Spec Y, (y-3)} \to \OO_{\Spec X}(\Spec X) = \RR[x]. \]
 This requires $y \mapsto 3$, as we saw,
-since $y-c$ is a unit of $\RR[x]$ for any $c \ne 3$.
+since $y-c$ is a unit of $\RR[x]$ for any $c \neq 3$.
 
 \begin{example}
 	[Constant map to $(y^2+1)$ does not exist]
@@ -355,7 +355,7 @@ We now consider what we would think
 of as the map $t \mapsto t^2$.
 \begin{example}
 	[The map $t \mapsto t^2$]
-	We consider a map 
+	We consider a map
 	\[ \pi \colon X = \Spec \CC[x] \to \Spec \CC[y] = Y \]
 	defined on points as follows:
 	\begin{align*}
@@ -472,7 +472,7 @@ into just the single ring homomorphism on the top level.
 			\pi(\kp) &= \kq = \left\{ f \in B \mid f \in \kq \right\} \\
 			&= \left\{ f \in B \mid f \text{ vanishes on } \kq \right\} \\
 			&= \left\{ f \in B \mid \pi^\sharp_B(f) \text{ vanishes on } \kp \right\} \\
-			&= \left\{ f \in B \mid \pi^\sharp_B(f) \in \kp \right\} 
+			&= \left\{ f \in B \mid \pi^\sharp_B(f) \in \kp \right\}
 			= \left\{ f \in B \mid \psi(f) \in \kp \right\} \\
 			&= \psi\pre(\kp).
 		\end{align*}
@@ -777,7 +777,7 @@ The most important class of schemes which are not affine are
 The complete the obvious analogy:
 \[
 	\frac{\text{Affine variety}}{\text{Projective variety}}
-	= 
+	=
 	\frac{\text{Affine scheme}}{\text{Projective scheme}}.
 \]
 Let $S$ be \emph{any} (commutative) graded ring, like $\CC[x_0, \dots, x_n]$.
@@ -788,11 +788,11 @@ Let $S$ be \emph{any} (commutative) graded ring, like $\CC[x_0, \dots, x_n]$.
 		$\kp$ which do not contain $S^+$.
 		\ii If $I \subseteq S$ is homogeneous, then
 		we let $\Vp(I) = \{ \kp \in \Proj S \mid I \subseteq \kp \}$.
-		Then the \vocab{Zariski topology} is imposed by declaring 
+		Then the \vocab{Zariski topology} is imposed by declaring
 		sets of the form $\Vp(I)$ to be closed.
 		\ii We now define a pre-sheaf $\SF$ on $\Proj S$ by
-		\[ \SF(U) = 
-			\left\{ \frac{f}{g} \mid 
+		\[ \SF(U) =
+			\left\{ \frac{f}{g} \mid
 			g(\kp) \neq 0 \; \forall \kp \in U \text{ and }
 			\deg f = \deg g \right\}.
 		\]
@@ -816,7 +816,7 @@ So, we define a slightly modified localization:
 			\deg f = \deg g \right\} \]
 		denote the elements of $S_\kp$ with ``degree zero''.
 		\ii For any homogeneous $g \in S$ of degree $d$, let
-		\[ S_{(g)} = \left\{ \frac{f}{g^r} \mid 
+		\[ S_{(g)} = \left\{ \frac{f}{g^r} \mid
 			\deg f = r \deg g \right\} \]
 		denote the elements of $S_g$ with ``degree zero''.
 	\end{enumerate}
@@ -862,13 +862,13 @@ First, recall that a sheaf is a contravariant functor (pre-sheaf)
 with extra conditions. In light of this, it is not hard to guess
 the definition of a morphism of pre-sheaves:
 \begin{definition}
-	A \vocab{morphism of (pre-)sheaves} $\alpha : \SF \to \SG$ on the same
+	A \vocab{morphism of (pre-)sheaves} $\alpha \colon \SF \to \SG$ on the same
 	space $X$ is a \textbf{natural transformation} of the underlying functors.
 	Isomorphism of sheaves is defined in the usual way.
 \end{definition}
 \begin{ques}
 	Show that this amounts to: for each $U \subseteq X$ we need to specify
-	a morphism $\alpha_U : \SF(U) \to \SG(U)$ such that the diagram
+	a morphism $\alpha_U \colon \SF(U) \to \SG(U)$ such that the diagram
 	\begin{center}
 	\begin{tikzcd}
 		\SF(U_2) \ar[r, "\alpha_{U_2}"]
@@ -884,8 +884,8 @@ they are theoretically easier to think about.
 And in fact:
 \begin{proposition}
 	[Morphisms determined by stalks]
-	A morphism of sheaves $\alpha : \SF \to \SG$ induces a morphism of stalks
-	\[ \alpha_p : \SF_p \to \SG_p \]
+	A morphism of sheaves $\alpha \colon \SF \to \SG$ induces a morphism of stalks
+	\[ \alpha_p \colon \SF_p \to \SG_p \]
 	for every point $p \in X$.
 	Moreover, the sequence $(\alpha_p)_{p \in X}$ determines $\alpha$ uniquely.
 \end{proposition}
@@ -895,7 +895,7 @@ And in fact:
 	\begin{ques}
 		Show this is well-defined.
 	\end{ques}
-	Now suppose $\alpha , \beta : \SF \to \SG$ satisfy $\alpha_p = \beta_p$
+	Now suppose $\alpha , \beta \colon \SF \to \SG$ satisfy $\alpha_p = \beta_p$
 	for every $p$. We want to show $\alpha_U(s) = \beta_U(s)$
 	for every $s \in \SF(U)$.
 	\begin{ques}
@@ -905,4 +905,3 @@ And in fact:
 \end{proof}
 Thus a morphism of sheaves can be instead modelled as a morphism
 of all the stalks. We will see later on that this viewpoint is quite useful.
-

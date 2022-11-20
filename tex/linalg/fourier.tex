@@ -29,7 +29,7 @@ The idea of Fourier analysis is to then select an \emph{orthonormal basis}
 for this set of functions, say $(e_\xi)_{\xi}$,
 which we call the \vocab{characters};
 the indexing $\xi$ are called \vocab{frequencies}.
-In that case, since we have a basis, every function $f : Z \to \CC$
+In that case, since we have a basis, every function $f \colon Z \to \CC$
 becomes a sum
 \[ f(x) = \sum_{\xi} \wh f(\xi) e_\xi \]
 where $\wh f(\xi)$ are complex coefficients of the basis;
@@ -109,7 +109,7 @@ Thus, we have a decomposition
 	for each of the four $S$'s.
 \end{example}
 This notion is useful in particular for
-binary functions $f : \{\pm1\}^n \to \{\pm1\}$;
+binary functions $f \colon \{\pm1\}^n \to \{\pm1\}$;
 for these functions (and products thereof),
 we always have $\left< f,f \right> = 1$.
 
@@ -205,10 +205,10 @@ as a ``roots of unity filter'', which is exactly the point.
 For concreteness, suppose one wants to compute
 \[ \binom{1000}{0} + \binom{1000}{3} + \dots + \binom{1000}{999}. \]
 In that case, we can consider the function
-\[ w : \ZZ/3 \to \CC. \]
+\[ w \colon \ZZ/3 \to \CC. \]
 such that $w(0) = 1$ but $w(1) = w(2) = 0$.
 By abuse of notation we will also think of $w$
-as a function $w : \ZZ \surjto \ZZ/3 \to \CC$.
+as a function $w \colon \ZZ \surjto \ZZ/3 \to \CC$.
 Then the sum in question is
 \begin{align*}
 	\sum_n \binom{1000}{n} w(n)
@@ -255,7 +255,7 @@ This is the most famous one, and hence the one you've heard of.
 	is considered to equal zero.\footnote{We won't define this, yet,
 		as it won't matter to us for now.
 		But we will elaborate more on this in the parts on measure theory.
-	
+
 		There is one point at which this is relevant.
 		Often we require that the function $f$ satisfies $f(-\pi) = f(\pi)$,
 		so that $f$ becomes a periodic function,
@@ -323,7 +323,7 @@ In that sense, we could rewrite the above table as:
 \[
 	\begin{array}{llll}
 		\hline
-		\text{Name} & \text{Domain }G & \text{Dual }\wh G 
+		\text{Name} & \text{Domain }G & \text{Dual }\wh G
 			& \text{Characters} \\ \hline
 		\text{Binary} & \{\pm1\}^n
 			& S \subseteq \left\{ 1, \dots, n \right\}
@@ -365,9 +365,9 @@ square sum of the coefficients.
 
 \begin{corollary}
 	[Fourier inversion formula]
-	Let $f : Z \to \CC$, where $Z$ is a finite abelian group.
+	Let $f \colon Z \to \CC$, where $Z$ is a finite abelian group.
 	Then \[ \wh f(\xi) = \frac{1}{|Z|} \sum_{x \in Z} f(x) \ol{e_\xi(x)}. \]
-	Similarly, if $f : [-\pi, \pi] \to \CC$ is square-integrable then
+	Similarly, if $f \colon [-\pi, \pi] \to \CC$ is square-integrable then
 	its Fourier series is given by
 	\[ \wh f(n) = \frac{1}{2\pi} \int_{[-\pi, \pi]} f(x) \exp(-inx) \; dx. \]
 \end{corollary}
@@ -381,9 +381,9 @@ the coefficient of $e_\xi$ in $f$ is $\left< f, e_\xi\right>$.
 
 \begin{corollary}
 	[Plancherel theorem]
-	Let $f : Z \to \CC$, where $Z$ is a finite abelian group.
+	Let $f \colon Z \to \CC$, where $Z$ is a finite abelian group.
 	Then \[ \left< f,g \right> = \sum_{\xi \in Z} \wh f(\xi) \ol{\wh g(\xi)}. \]
-	Similarly, if $f : [-\pi, \pi] \to \CC$ is square-integrable then
+	Similarly, if $f \colon [-\pi, \pi] \to \CC$ is square-integrable then
 	\[ \left< f,g \right> = \sum_n \wh f(n) \ol{\wh g(n)}. \]
 \end{corollary}
 \begin{ques}
@@ -494,13 +494,13 @@ that $f(+1, \dots, +1) = +1$ (hence possibility of anti-dictatorship).
 	that the exact probability of a paradoxical outcome
 	for any functions $f$, $g$, $h$ is given exactly by
 	\[ \frac14 + \frac14 \sum_{S \subseteq \{1, \dots, n\}}
-		\left( -\frac13 \right)^{\left\lvert S \right\rvert} 
+		\left( -\frac13 \right)^{\left\lvert S \right\rvert}
 		\left( \wh f(S) \wh g(S) + \wh g(S) \wh h(S) + \wh h(S) \wh f(S) \right).
 		\]
 	Assume that this probability (of a paradoxical outcome) equals $0$.
 	Then, we derive
 	\[ 1 = \sum_{S \subseteq \{1, \dots, n\}}
-		-\left( -\frac13 \right)^{\left\lvert S \right\rvert} 
+		-\left( -\frac13 \right)^{\left\lvert S \right\rvert}
 		\left( \wh f(S) \wh g(S) + \wh g(S) \wh h(S) + \wh h(S) \wh f(S) \right). \]
 	But now we can just use weak inequalities.
 	We have $\wh f(\varnothing) = \EE f = 0$ and similarly for $\wh g$ and $\wh h$,
@@ -509,10 +509,10 @@ that $f(+1, \dots, +1) = +1$ (hence possibility of anti-dictatorship).
 	(which is true across all real numbers) to deduce that
 	\begin{align*}
 		1 &= \sum_{S \subseteq \{1, \dots, n\}}
-		-\left( -\frac13 \right)^{\left\lvert S \right\rvert} 
+		-\left( -\frac13 \right)^{\left\lvert S \right\rvert}
 		\left( \wh f(S) \wh g(S) + \wh g(S) \wh h(S) + \wh h(S) \wh f(S) \right) \\
 		&\le \sum_{S \subseteq \{1, \dots, n\}}
-		\left( \frac13 \right)^{\left\lvert S \right\rvert} 
+		\left( \frac13 \right)^{\left\lvert S \right\rvert}
 		\left( \wh f(S)^2 + \wh g(S)^2 + \wh h(S)^2 \right) \\
 		&\le \sum_{S \subseteq \{1, \dots, n\}} \left( \frac13 \right)^1
 		\left( \wh f(S)^2 + \wh g(S)^2 + \wh h(S)^2 \right) \\
@@ -550,17 +550,17 @@ that $f(+1, \dots, +1) = +1$ (hence possibility of anti-dictatorship).
 	\[ f(x_1, \dots, x_n) = g(y_1, \dots, y_n) = h(z_1, \dots, z_n) \]
 	is given by the formula
 	\[ \frac14 + \frac14 \sum_{S \subseteq \{1, \dots, n\}}
-		\left( -\frac13 \right)^{\left\lvert S \right\rvert} 
+		\left( -\frac13 \right)^{\left\lvert S \right\rvert}
 		\left( \wh f(S) \wh g(S) + \wh g(S) \wh h(S) + \wh h(S) \wh f(S) \right)
 		\]
 	\begin{hint}
-		Define the Boolean function $D : \{\pm 1\}^3 \to \RR$ by
+		Define the Boolean function $D \colon \{\pm 1\}^3 \to \RR$ by
 		$D(a,b,c) = ab+bc+ca$.
 		Write out the value of $D(a,b,c)$ for each $(a,b,c)$.
 		Then, evaluate its expected value.
 	\end{hint}
 	\begin{sol}
-	Define the Boolean function $D : \{\pm 1\}^3 \to \RR$ by
+	Define the Boolean function $D \colon \{\pm 1\}^3 \to \RR$ by
 	\[ D(a,b,c) = ab + bc + ca
 		= \begin{cases}
 			3 & a,b,c \text{ all equal} \\
@@ -587,7 +587,7 @@ that $f(+1, \dots, +1) = +1$ (hence possibility of anti-dictatorship).
 		the parity of the product with 50\% either way,
 		and is independent of any other variables in the product.
 		\ii On the other hand, suppose $S = T$.
-		Then 
+		Then
 		\[ \chi_S(x_\bullet) \chi_T(y_\bullet)
 			= \prod_{s \in S} x_sy_s. \]
 		Note that $x_sy_s$ is equal to $1$ with probability $\frac13$

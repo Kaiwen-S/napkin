@@ -20,7 +20,7 @@ which I'll describe using the embeddings.\footnote{This is
 	not really the right definition; the ``correct'' way to think of
 	primes, finite or infinite, is in terms of valuations.
 	But it'll be sufficient for me to state the theorems I want.}
-Recall there are $n$ embeddings $\sigma : K \to \CC$, which consist of
+Recall there are $n$ embeddings $\sigma \colon K \to \CC$, which consist of
 \begin{itemize}
 	\ii $r$ real embeddings where $\img\sigma \subseteq \RR$, and
 	\ii $s$ pairs of conjugate complex embeddings.
@@ -62,7 +62,7 @@ We say $a \equiv b \pmod{\km}$ if
 	\ii If $\kp$ is a finite prime, then $a \equiv b \pmod{\kp^{\nu(\kp)}}$
 	means exactly what you think it should mean:
 	$a-b \in \kp^{\nu(\kp)}$.
-	\ii If $\kp$ is a \emph{real} infinite prime $\sigma : K \to \RR$, then
+	\ii If $\kp$ is a \emph{real} infinite prime $\sigma \colon K \to \RR$, then
 	$a \equiv b \pmod{\kp}$ means that $\sigma(a/b) > 0$.
 \end{itemize}
 Of course, $a \equiv b \pmod{\km}$ means $a \equiv b$
@@ -77,7 +77,7 @@ With this, we can define a generalization of the class group:
 		\[
 			\left\{
 				\alpha \OO_K
-				\mid 
+				\mid
 				\alpha \in K^\times \text{ and }
 				\alpha \equiv 1 \pmod{\km}
 			\right\}.
@@ -110,7 +110,7 @@ This definition takes a while to get used to, so here are examples.
 		\ii Now take $\km = 8$.
 		Thus $I_\QQ(8) \cong \left\{ \frac ab\ZZ \mid
 			a/b \equiv 1,3,5,7 \pmod 8 \right\}$.
-		Moreover 
+		Moreover
 		\[ P_\QQ(8) \cong \left\{ \frac ab\ZZ \mid
 			a/b \equiv 1 \pmod 8 \right\}. \]
 		You might at first glance think that
@@ -147,7 +147,7 @@ This definition takes a while to get used to, so here are examples.
 		As before $I_\QQ(8\infty) \cong \left\{ \frac ab\ZZ \mid
 			a/b \equiv 1,3,5,7 \pmod 8 \right\}$.
 		Now in this case:
-		\[ P_\QQ(8\infty) \cong \left\{ \frac ab\ZZ \mid 
+		\[ P_\QQ(8\infty) \cong \left\{ \frac ab\ZZ \mid
 			a/b \equiv 1 \pmod 8 \text{ and } a/b > 0 \right\}.  \]
 		This time, we really do have $-7\ZZ \notin P_\QQ(8\infty)$:
 		we have $7 \not\equiv 1 \pmod 8$ and also $-8 < 0$.
@@ -179,7 +179,7 @@ We already know prime ideals $\kp$ of $K$ break into
 a product of prime ideals $\kP$ of $K$ in $L$ in a nice way,
 so we want to do the same thing with infinite primes.
 This is straightforward: each of the $n$ infinite primes
-$\sigma : K \to \CC$ lifts to $m$ infinite primes $\tau : L \to \CC$,
+$\sigma \colon K \to \CC$ lifts to $m$ infinite primes $\tau \colon L \to \CC$,
 by which I mean the diagram
 \begin{center}
 \begin{tikzcd}
@@ -230,7 +230,7 @@ Recall the key result:
 	then $\Frob_\kP$ is the unique element such that
 	\[ (a+bi)^p \equiv \Frob_\kP(a+bi) \pmod{\kP} \]
 	in $\ZZ[i]$. In particular,
-	\[ \Frob_\kP(i) = i^p = 
+	\[ \Frob_\kP(i) = i^p =
 		\begin{cases}
 			i & p \equiv 1 \pmod 4 \\
 			-i & p \equiv 3 \pmod 4.
@@ -246,12 +246,12 @@ Recall the key result:
 	It's well-known that $L/K$ is unramified outside $\infty$
 	and prime factors of $m$.
 	Moreover, the Galois group $\Gal(L/K)$ is $(\ZZ/m\ZZ)^\times$:
-	the Galois group consists of elements of the form 
-	\[ \sigma_n : \zeta \mapsto \zeta^n \]
+	the Galois group consists of elements of the form
+	\[ \sigma_n \colon \zeta \mapsto \zeta^n \]
 	and $\Gal(L/K) = \left\{ \sigma_n \mid n \in (\ZZ/m\ZZ)^\times \right\}$.
 
 	Then it follows just like before that
-	if $p \nmid n$ is prime and $\kP$ is above $p$
+	if $p \nmid m$ is prime and $\kP$ is above $p$
 	\[ \Frob_\kP(x) = \sigma_p. \]
 \end{example}
 
@@ -268,9 +268,9 @@ in the nicest way possible:
 	splits completely in $L/K$.
 \end{lemma}
 \begin{proof}
-	We want to understand the order of the map $T : x \mapsto x^{N\kp}$ on
+	We want to understand the order of the map $T \colon x \mapsto x^{N\kp}$ on
 	the field $\OO_K / \kP$.
-	But the latter is isomorphic to the splitting field 
+	But the latter is isomorphic to the splitting field
 	of $X^{N\kP} - X$ in $\FF_p$, by Galois theory of finite fields.
 	Hence the order is $\log_{N\kp} (N\kP) = f(\kP \mid \kp)$.
 \end{proof}
@@ -287,7 +287,7 @@ so that we have
 Thus $\Frob_\kP$ is determined by its underlying $\kp$ up to conjugation.
 
 In class field theory, we are interested in \vocab{abelian extensions},
-i.e.\ those for which $\Gal(L/K)$ is Galois.
+i.e.\ those for which $\Gal(L/K)$ is abelian.
 Here the theory becomes extra nice:
 the conjugacy classes have size one.
 \begin{definition}
@@ -327,7 +327,7 @@ To see why:
 	\[
 		\left( \frac{K(\cbrt 2)/K}{\theta \OO_K} \right) \left( \cbrt 2 \right)
 		\equiv \left( \cbrt 2 \right)^{N(\theta)}
-		\equiv 2^{\frac{N\theta-1}{3}} \cdot \sqrt 2
+		\equiv 2^{\frac{N\theta-1}{3}} \cdot \cbrt 2
 		\equiv \left( \frac{2}{\theta} \right)_3 \cbrt 2.
 		\pmod{\kP}
 	\]
@@ -344,17 +344,13 @@ For brevity, in what follows let $\Ram(L/K)$ denote the primes of $K$
 	divisible by every prime in $\Ram(L/K)$.
 	Then since $L/K$ is abelian we can extend the Artin symbol
 	multiplicatively to a map
-	\[
-		\left( \frac{L/K}{\bullet} \right) :
-		I_K(\km) \surjto \Gal(L/K).
-	\]
+	\[ \left( \frac{L/K}{\bullet} \right) \colon I_K(\km) \surjto \Gal(L/K). \]
 	This is called the \vocab{Artin map},
 	and it is surjective (for example by Chebotarev Density).
-	Thus we denote its kernel by 
-	\[ H(L/K, \km) \subseteq I_K(\km). \]
+
+	Let $H(L/K, \km) \subseteq I_K(\km)$ denote the kernel of this map, so
+	\[ \Gal(L/K) \cong I_K(\km) / H(L/K, \km). \]
 \end{definition}
-In particular we have
-$\Gal(L/K) \cong I_K(\km) / H(L/K, \km)$.
 
 We can now present the long-awaited Artin reciprocity theorem.
 \begin{theorem}
@@ -363,7 +359,7 @@ We can now present the long-awaited Artin reciprocity theorem.
 	Then there is a modulus $\kf = \kf(L/K)$,
 	divisible by exactly the primes of $\Ram(L/K)$, such that:
 	for any modulus $\km$ divisible by all primes of $\Ram(L/K)$, we have
-	\[ 
+	\[
 		P_K(\km) \subseteq H(L/K, \km) \subseteq I_K(\km)
 		\quad\text{if and only if}\quad
 		\kf \mid \km.
@@ -383,7 +379,7 @@ the above theorem tells us we get a sequence of maps
 	I_K(\kf) \ar[r, two heads] & C_K(\kf) \ar[rd, two heads]
 		\ar[rr, "\left( \frac{L/K}{\bullet} \right)", two heads]
 		&& \Gal(L/K) \\
-	&& I_K(\kf) / H(L/K, \kf) \ar[ru, "\cong", swap] & 
+	&& I_K(\kf) / H(L/K, \kf) \ar[ru, "\cong", swap] &
 \end{tikzcd}
 \end{center}
 Consequently:
@@ -408,7 +404,7 @@ Let's see how this result relates to quadratic reciprocity.
 	is the correct generalization of the Legendre symbol.
 	Thus, Artin reciprocity tells us that there is a conductor
 	$\kf = \kf(\QQ(\sqrt a)/\QQ)$ such that
-	$\left( \frac{\QQ(\sqrt a)/\QQ}{p} \right)$ depends only on 
+	$\left( \frac{\QQ(\sqrt a)/\QQ}{p} \right)$ depends only on
 	the residue of $p$ modulo $\kf$, which is what we wanted.
 \end{example}
 
@@ -421,7 +417,7 @@ Here is an example along the same lines.
 	Let's translate this idea into the notation of Artin reciprocity.
 
 	We are going to prove
-	\[ 
+	\[
 		H(\QQ(\zeta) / \QQ,  m\infty)
 		= P_\QQ(m\infty)
 		= \left\{ \frac ab \ZZ \mid a/b \equiv 1 \pmod m \right\}.
@@ -460,9 +456,9 @@ Finally, such subgroups reverse inclusion in the best way possible:
 \begin{lemma}
 	[Inclusion-reversing congruence subgroups]
 	Fix a modulus $\km$.
-	Let $L/K$ and $M/K$ be abelian extensions 
+	Let $L/K$ and $M/K$ be abelian extensions
 	and suppose $\km$ is divisible by the conductors of $L/K$ and $M/K$.
-	Then 
+	Then
 	\[ L \subseteq M
 		\quad\text{if and only if}\quad
 		H(M/K, \km) \subseteq H(L/K, \km).  \]
@@ -570,4 +566,3 @@ To finish, here is a quote from Emil Artin on his reciprocity law:
 		This completes the proof.
 	\end{sol}
 \end{dproblem}
-
