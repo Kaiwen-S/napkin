@@ -87,7 +87,7 @@ So I can ask, when does this series converge?
 It terms out there is a precise answer for this.
 
 \begin{definition}
-	Given a power series $\sum_{n=0}^{\infty} a_n z_n$,
+	Given a power series $\sum_{n=0}^{\infty} a_n z^n$,
 	the \vocab{radius of convergence} $R$ is defined
 	by the formula
 	\[ \frac 1R = \limsup_{n \to \infty} \left\lvert a_n \right\rvert^{1/n}. \]
@@ -188,10 +188,8 @@ As promised, differentiation works exactly as you want.
 \end{theorem}
 \begin{proof}
 	Also omitted.
-	The right way to prove it is to define the notion
-	``converges uniformly'',
-	and strengthen Cauchy-Hadamard to have
-	this is as a conclusion as well.
+	The right way to prove it is to define the notion ``converges uniformly'',
+	and strengthen Cauchy-Hadamard to have this as a conclusion as well.
 	However, we won't use this later.
 \end{proof}
 
@@ -298,7 +296,7 @@ Like with differentiable functions:
 	The sums, products, compositions, nonzero quotients
 	of analytic functions are analytic.
 \end{proposition}
-The upshot of this is is that most of your usual
+The upshot of this is that most of your usual
 functions that occur in nature,
 or even artificial ones like $f(x) = e^x + x \sin(x^2)$,
 will be analytic, hence describable locally by Taylor series.
@@ -366,7 +364,7 @@ The log function then comes after.
 \end{definition}
 Since its derivative is $1/x$ it is smooth;
 and then one may compute its coefficients to show it is analytic.
-	
+
 Note that this actually gives us a rigorous way to define
 $a^r$ for any $a > 0$ and $r > 0$, namely
 \[ a^r \defeq \exp\left( r \log a \right). \]

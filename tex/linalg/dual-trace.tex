@@ -311,14 +311,14 @@ on what basis you picked.
 		e_2 &= (0,1,-1).
 	\end{align*}
 	Alice uses this to construct an isomorphism $A \colon V \to V^\vee$
-	as described above, and considers $e_1^\vee = A(e_1^\vee)$.
+	as described above, and considers $e_1^\vee = A(e_1)$.
 	The element $e_1^\vee \in V^\vee$ is a
 	function $e_1^\vee \colon V \to \RR$,
 	meaning Alice can plug any vector in $V$ into it.
 	As an example, for $v_{\text{example}}$
 	\[ e_1^\vee(v_{\text{example}})
-		= e_1\left( (3,5,-8) \right)
-		= e_1^\vee\left( 3e_1 - 5e_2 \right) = 3. \]
+		= e_1^\vee\left( (3,5,-8) \right)
+		= e_1^\vee\left( 3e_1 + 5e_2 \right) = 3. \]
 	Meanwhile, Bob chooses the different basis vectors
 	\begin{align*}
 		f_1 &= (1,0,-1) \\
@@ -328,7 +328,7 @@ on what basis you picked.
 	and a corresponding $f_1^\vee = B(f_1)$.
 	Bob can also evaluate it anywhere, e.g.
 	\[ f_1^\vee\left( v_{\text{example}} \right)
-		f_1^\vee\left( (3, 5, -8) \right)
+		= f_1^\vee\left( (3, 5, -8) \right)
 		= f_1^\vee\left( 8f_1 - 5f_2 \right) = 8. \]
 
 	It follows that $e_1^\vee = A\left( (1,0,-1) \right)$
