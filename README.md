@@ -1,4 +1,4 @@
-# Napkin v1.5
+# An Infinitely Large Napkin
 
 ![Last commit](https://img.shields.io/github/last-commit/vEnhance/napkin)
 ![Forks](https://img.shields.io/github/forks/vEnhance/napkin)
@@ -6,6 +6,19 @@
 
 These are the source files for Evan Chen's _An Infinitely Large Napkin_.
 You can read about the project on my [webpage](https://web.evanchen.cc/napkin.html).
+
+### About
+
+_An Infinitely Large Napkin_ is a light
+and mostly self-contained introduction to higher math,
+roughly ranging from the undergraduate syllabus to first-year graduate topics.
+The Napkin provides a general bird's-eye views of main ideas of fields
+and what makes them cool or interesting.
+It's less detailed than a real textbook
+but more precise than pop-math books and assumes proof experience.
+So for example, definitions and theorem statements
+will typically be complete and precise,
+but explanations for why a result "should" be true will supersede formal proofs.
 
 ### Download
 
@@ -23,6 +36,15 @@ On a system with nix, just run `nix build`.
 
 _Pull requests are welcome!_
 You can email corrections directly to me as well.
+
+### Community solutions
+
+There is a community working on both human-readable and Lean4 proofs
+of Napkin problems and examples. See:
+
+- Napkin formal proofs written in Lean4: https://github.com/napkin-community/proofs
+- Napkin human-readible solutions written in Typst: https://github.com/napkin-community/solutions
+  - Rendered: https://napkin-community.github.io/solutions/ (written in Typst)
 
 ### Coffee
 

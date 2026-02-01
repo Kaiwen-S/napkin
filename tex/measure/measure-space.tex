@@ -242,7 +242,7 @@ I've gone on too long with no examples.
 		\ii The axioms on $\mu$ can be weakened to
 		(i) $\mu(\varnothing) = 0$,
 		(ii) $\mu(A \sqcup B) = \mu(A) + \mu(B)$, and
-		(iii) for $A_1 \supseteq A_2 \supseteq \cdots$,
+		(iii) for $A_1 \supseteq A_2 \supseteq \cdots$ with $\mu(A_1) < \infty$,
 		we have $\mu\left( \bigcap_n A_n \right) = \lim_n \mu(A_n)$.
 	\end{enumerate}
 \end{exercise}
@@ -365,8 +365,13 @@ The analog here is:
 	Let $(X, \SA)$ and $(Y, \SB)$ be measurable spaces
 	(or measure spaces).
 	A function $f \colon X \to Y$ is \vocab{measurable}
-	if for any open set $S \subseteq Y$ (i.e.\ $S \in \SB$)
+	if for any measurable set $S \subseteq Y$ (i.e.\ $S \in \SB$)
 	we have $f\pre(S)$ is measurable (i.e. $f\pre(S) \in \SA$).
+
+  In most cases $Y$ is actually a topological space with the Borel $\sigma$-algebra
+  (e.g.\ $Y = \RR$) and in that case we can replace ``measurable set $S$''
+  with ``open set $S$''.
+  You can take this as a standing assumption for the rest of this text.
 \end{definition}
 
 Apart from the obvious symmetry with the definition of continuous function,
@@ -375,11 +380,10 @@ for a nonnegative function $f \colon \Omega \to \RR_{\geq 0}$,
 $\int_\Omega f \; d\mu$ exists if and only if $f$ is measurable.
 
 \begin{remark}
-	By symmetry, you might have guessed that a function $f: X \to Y$ is measurable if for any measurable
-	$S \subseteq Y$, we have $f\pre(S) \subseteq X$ is measurable.
-
-	Nevertheless, this definition doesn't work the way we expect --- even continuous function can fail
-	this definition.
+	Note that a measurable function actually does not need to be continuous,
+	as the next example shows.
+	On the other hand, most functions you actually encounter in practice will be continuous,
+	and in that case ware fine.
 \end{remark}
 \begin{example}
 	[Continuous function with non-measurable preimage of measurable set]
@@ -403,15 +407,12 @@ $\int_\Omega f \; d\mu$ exists if and only if $f$ is measurable.
 	\end{itemize}
 \end{example}
 
-In practice, most functions you encounter will be continuous anyways,
-and in that case we are fine.
 \begin{proposition}
 	[Continuous implies Borel measurable]
 	Suppose $X$ and $Y$ are topological spaces
 	and we pick the Borel measures on both.
 	A function $f \colon X \to Y$
-	which is continuous as a map of topological spaces
-	is also measurable.
+	which is continuous as a map of topological spaces is also measurable.
 \end{proposition}
 \begin{proof}
 	Follows from the fact that pre-images of open sets are open, thus Borel measurable.
@@ -466,7 +467,7 @@ except this one might take a little while to get used to.\footnote{In fact,
 
 \begin{problem}
 	[On countable $\sigma$-algebras]
-	\gim
+	\onechili
 	Let $\SA$ be a $\sigma$-algebra on a set $\Omega$.
 	Suppose that $\SA$ has countable cardinality.
 	Prove that $|\SA|$ is finite and equals a power of $2$.

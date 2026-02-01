@@ -185,7 +185,7 @@ Here is the so-called ``monotone convergence theorem''.
 		&\le \int_\Omega f \; d\mu
 	\end{align*}
 	where the first $\le$ is by Fatou lemma,
-	and the second by the fact that
+	and the third by the fact that
 	$\int_\Omega f_n \le \int_\Omega f$ for every $n$.
 	This implies all the inequalities are equalities and we are done.
 \end{proof}
@@ -218,12 +218,12 @@ and the difficult half is automatically taken care of by Fatou's lemma.
 
 The most famous result, though is the following.
 \begin{corollary}
-	[Fatou–Lebesgue theorem]
-	Let $f$ and $f_1, f_2, \dots \colon \Omega \to \RR$
+	[Fatou-Lebesgue theorem]
+	Let $f_1, f_2, \dots \colon \Omega \to \RR$
 	be a sequence of measurable functions.
 	Assume that $g \colon \Omega \to \RR$ is an
 	\emph{absolutely integrable} function for which
-	$|f_n(\omega)| \le |g(\omega)|$ for all $\omega \in \Omega$.
+	$|f_n(\omega)| \le g(\omega)$ for all $\omega \in \Omega$.
 	Then the inequality
 	\begin{align*}
 		\int_\Omega \left( \liminf_{n \to \infty} f_n \right) \; d\mu
