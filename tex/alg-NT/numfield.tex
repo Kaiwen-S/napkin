@@ -13,7 +13,7 @@ It's drawn largely from the first chapter of \cite{ref:oggier_NT}.
 
 \section{Motivation from high school algebra}
 This is adapted from my blog, \emph{Power Overwhelming}\footnote{URL:
-\url{https://blog.evanchen.cc/2014/10/19/why-do-roots-come-in-conjugate-pairs/}}.
+\url{https://blog.evanchen.cc/conjugate/}}.
 
 In high school precalculus, you'll often be asked to find the roots of some polynomial with integer coefficients.
 For instance,
@@ -166,15 +166,15 @@ but the results in the next chapter will more or less
 do it for us, and so we take this on faith temporarily.
 
 \begin{remark}
-  For $\alpha$ an algebraic integer with minimal 
-  polynomial $P$, it's clear by definition that all 
-  other roots of $P$ are also algebraic integers. One 
-  can check that this property (along with the two 
-  properties above) characterize the set of algebraic
-  integers. From this point of view, the algebraic
-  integers can be thought of as an intrinsically-defined 
-  generalization of the ring of integers $\ZZ \subseteq 
-  \QQ$ to the field of all algebraic numbers $\ol{\QQ}$. 
+	For $\alpha$ an algebraic integer with minimal
+	polynomial $P$, it's clear by definition that all
+	other roots of $P$ are also algebraic integers. One
+	can check that this property (along with the two
+	properties above) characterize the set of algebraic
+	integers. From this point of view, the algebraic
+	integers can be thought of as an intrinsically-defined
+	generalization of the ring of integers $\ZZ \subseteq
+	\QQ$ to the field of all algebraic numbers $\ol{\QQ}$.
 \end{remark}
 
 \section{Number fields}
@@ -301,6 +301,19 @@ makes it clear why this theorem should not be too surprising.
 	\begin{hint}
 		View as roots of unity. Note $\half$ isn't an algebraic integer.
 	\end{hint}
+	\begin{sol}
+		Proceed by contradiction and place the lamps at roots of unity
+		(so that regular polygons have sum zero).
+		Consider the sum of all moves.
+		If we found a successful sequence of operations,
+		then we have found a sequence $a_1$, $a_2$, \dots, $a_n$ of \emph{even} integers satisfying
+		\[ 1 = \sum_i a_i e^{\frac{2\pi i}{n}}. \]
+		In other words,
+		\[ \half = \sum_i \frac{a_i}{2} e^{\frac{2\pi i}{n}}. \]
+		This is a contradiction because the RHS is an algebraic integer
+		(the sum of algebraic integers is also an algebraic integer),
+		but the LHS $\half$ is not an algebraic integer.
+	\end{sol}
 \end{problem}
 
 \begin{problem}[Kronecker's theorem]
